@@ -2,7 +2,8 @@ FROM python:3.12-slim-bookworm
 
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1 \
-    PLAYWRIGHT_BROWSERS_PATH=/opt/playwright
+    PLAYWRIGHT_BROWSERS_PATH=/opt/playwright \
+    PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 
 # Install the same distributable package tested by CI, including design modules.
 # Proxy values can be passed using Docker's standard build proxy arguments.
